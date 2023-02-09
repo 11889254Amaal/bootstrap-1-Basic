@@ -50,5 +50,6 @@ public class Student  {
     }
 
     @OneToMany
+    @JoinColumn(referencedColumnName = "id")
      List<Course> course;
 }

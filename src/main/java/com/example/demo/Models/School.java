@@ -35,5 +35,6 @@ public class School {
         this.students = students;
     }
     @OneToMany
+            @JoinColumn(referencedColumnName = "id")
     List<Student> students;
 }

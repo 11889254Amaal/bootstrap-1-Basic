@@ -35,6 +35,7 @@ public class Course {
     String name;
 
     @OneToMany
+    @JoinColumn(referencedColumnName = "id")
     List<Mark> marks;
 
 }
