@@ -1,6 +1,6 @@
 package com.example.demo.Services;
 
-import com.example.demo.Models.Students;
+import com.example.demo.Models.Student;
 import com.example.demo.Repositories.StudentsInterface;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -12,16 +12,16 @@ public class StuentsServices {
 
 
     public void addStudents(){
-        Students students=new Students();
-        students.setFirstName("ali");
-        students.setLastName("aljasria");
-        students.setAge(30);
-        studentsInterface.save(students);
+        Student student =new Student();
+        student.setFirstName("ali");
+        student.setLastName("aljasria");
+        student.setAge(30);
+        studentsInterface.save(student);
     }
 
     public String deleteStudentById(Integer id){
-        Students StudentsToDelete=studentsInterface.findById(id).get();
-        studentsInterface.delete(StudentsToDelete);
+        Student studentToDelete =studentsInterface.findById(id).get();
+        studentsInterface.delete(studentToDelete);
         return "Student deleted";
     }
 

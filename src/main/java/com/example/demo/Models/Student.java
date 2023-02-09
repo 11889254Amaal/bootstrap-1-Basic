@@ -1,13 +1,12 @@
 package com.example.demo.Models;
 
-import jdk.jfr.DataAmount;
-import net.bytebuddy.dynamic.loading.InjectionClassLoader;
-
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 //@Table(name = "dbo.Students")
-public class Students {
+public class Student  {
+
     @Column(name = "firstName")
     String firstName;
 
@@ -49,4 +48,7 @@ public class Students {
     public void setAge(int age) {
         Age = age;
     }
+
+    @OneToMany
+     List<Course> course;
 }
