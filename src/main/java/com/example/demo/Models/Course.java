@@ -24,18 +24,14 @@ public class Course {
         this.name = name;
     }
 
-    public List<Mark> getMarks() {
-        return marks;
-    }
 
-    public void setMarks(List<Mark> marks) {
-        this.marks = marks;
-    }
     @Column(name = "CourseName")
     String name;
 
-    @OneToMany
-    @JoinColumn(referencedColumnName = "id")
-    List<Mark> marks;
+
+
+    @ManyToOne
+    @JoinColumn(name = "student_id ",referencedColumnName = "id")
+    Student student;
 
 }

@@ -27,14 +27,19 @@ public class School {
         this.name = name;
     }
 
-    public List<Student> getStudents() {
-        return students;
-    }
 
-    public void setStudents(List<Student> students) {
-        this.students = students;
-    }
-    @OneToMany
-            @JoinColumn(referencedColumnName = "id")
-    List<Student> students;
+    //I change this concepts because that effect table in database so using object relatinal mapping
+    //so go to student class and create school object
+
+//    public List<Student> getStudents() {
+//        return students;
+//    }
+//
+//    public void setStudents(List<Student> students) {
+//        this.students = students;
+//    }
+//    @OneToMany
+//    @JoinColumn(referencedColumnName = "id")
+//   // List<Student> students;
+
 }

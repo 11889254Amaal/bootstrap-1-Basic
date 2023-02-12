@@ -6,7 +6,11 @@ import java.util.List;
 @Entity
 //@Table(name = "dbo.Students")
 public class Student  {
-
+    //this object relational mapping
+    //using many to one loggaic
+    @ManyToOne
+    @JoinColumn(name = "school_id ",referencedColumnName = "id")
+    School school;
     @Column(name = "firstName")
     String firstName;
 
@@ -49,7 +53,6 @@ public class Student  {
         Age = age;
     }
 
-    @OneToMany
-    @JoinColumn(referencedColumnName = "id")
-     List<Course> course;
+
+
 }
