@@ -83,6 +83,22 @@ public class Controllers {
         return school;
     }
 
+    @RequestMapping(value="Course/GetById", method = RequestMethod.GET)
+    public Course getCourseById(@RequestParam Integer CourseId){
+        Course course1= CourseServices.getCourseById(CourseId);
+        return course1;
+    }
 
+    @RequestMapping(value="Mark/GetById", method = RequestMethod.GET)
+    public Mark getMarkById(@RequestParam Integer MarkId){
+        Mark mark= MarkServices.getMarkById(MarkId);
+        return mark;
+    }
+
+    @RequestMapping(value="school/GetBySchoolName", method = RequestMethod.GET)
+    public School getSchoolBySchoolName(@RequestParam String schoolName){
+        School school= SchoolServices.getSchoolByName(schoolName);
+        return school;
+    }
 
 }

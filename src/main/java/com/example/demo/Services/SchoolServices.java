@@ -22,4 +22,9 @@ public class SchoolServices {
         School school=schoolInterface.getSchoolBy(id);
         return school;
     }
+
+    public School getSchoolByName(String name) {
+        School school=schoolInterface.getSchoolByName(name);
+        return school;
+    }
 }
