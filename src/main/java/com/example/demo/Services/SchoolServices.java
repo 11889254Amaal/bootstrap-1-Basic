@@ -19,7 +19,7 @@ public class SchoolServices {
     }
 
     public School getSchoolById(Integer id) {
-        School school=new School();
+        School school=schoolInterface.getSchoolBy(id);
         return school;
     }
 }

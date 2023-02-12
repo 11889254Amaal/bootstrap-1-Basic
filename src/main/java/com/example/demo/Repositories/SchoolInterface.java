@@ -5,6 +5,7 @@ import com.example.demo.Models.Student;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
+import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
@@ -13,6 +14,9 @@ import java.util.List;
 public interface SchoolInterface extends CrudRepository<School,Integer> {
     @Query("select s from School s")
     List<School> getAllSchool();
+
+    @Query("select s from School s where s.id=:schoolId")
+    School getSchoolBy(@Param("schoolId") Integer id);
 
 
 }

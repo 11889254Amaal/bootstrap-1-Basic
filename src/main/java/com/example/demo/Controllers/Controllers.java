@@ -77,9 +77,9 @@ public class Controllers {
         return mark;
     }
 
-    @RequestMapping(value="school/deleteById", method = RequestMethod.GET)
-  public School getSchoolById(@RequestParam Integer id){
-        School school=new School();
+    @RequestMapping(value="school/GetById", method = RequestMethod.GET)
+    public School getSchoolById(@RequestParam Integer schoolId){
+        School school= SchoolServices.getSchoolById(schoolId);
         return school;
     }
 
