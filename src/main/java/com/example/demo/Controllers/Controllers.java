@@ -95,10 +95,12 @@ public class Controllers {
         return mark;
     }
 
-    @RequestMapping(value="school/GetBySchoolName", method = RequestMethod.GET)
-    public School getSchoolBySchoolName(@RequestParam String schoolName){
-        School school= SchoolServices.getSchoolByName(schoolName);
-        return school;
+    @RequestMapping(value = "student/getStudentsBySchoolName", method = RequestMethod.GET)
+    public List<Student> getStudentsBySchoolName(@RequestParam String schoolName) {
+
+        return studentService.getStudentsBySchoolName(schoolName);
+
     }
+
 
 }
