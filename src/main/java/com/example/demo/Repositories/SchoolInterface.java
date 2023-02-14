@@ -31,8 +31,9 @@ public interface SchoolInterface extends CrudRepository<School,Integer> {
 
 
 
-    @Query(value = "  SELECT s from School s where s.id=(SELECT max(s.id) from School)")
+    @Query(value = "SELECT s from School s where s.id=(SELECT max(s.id) from School s)")
     School getLatestRow();
 
-
+    @Query(value = "SELECT s from School s where s.id=(SELECT max(s.id) from School s )")
+    School  getLatestUpdated(@Param("schoolName") String name);
 }

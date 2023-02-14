@@ -2,7 +2,6 @@ package com.example.demo.Services;
 
 import com.example.demo.Models.School;
 import com.example.demo.Repositories.SchoolInterface;
-import com.example.demo.Repositories.StudentsInterface;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -40,4 +39,9 @@ public class SchoolServices {
        return schoolInterface.getLatestRow();
 
    }
+
+    public School getLatestUpdated(String name){
+        return schoolInterface.getLatestUpdated(name);
+
+    }
 }
