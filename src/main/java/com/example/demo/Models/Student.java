@@ -5,7 +5,7 @@ import java.util.List;
 
 @Entity
 //@Table(name = "dbo.Students")
-public class Student  {
+public class Student extends BaseEntity {
     //this object relational mapping
     //using many to one loggaic
     @ManyToOne

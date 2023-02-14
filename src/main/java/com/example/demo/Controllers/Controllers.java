@@ -41,59 +41,7 @@ public class Controllers {
 
     @Autowired
     MarkServices MarkServices;
-    @GetMapping(value = "/addStudent()")
-    public void addStudent(){
-        studentService.addStudents();
-        studentService.addStudents();
-    }
-    @GetMapping(value = "deletebyId")
-    public void deletebyId(@RequestParam Integer id){
-        studentService.deleteStudentById(id);
-    }
 
-
-    @RequestMapping(value="school/getAll", method = RequestMethod.GET)
-
-    public List<School> getAllSchool(){
-
-        List<School> schools = new ArrayList<>();
-        schools=SchoolServices.getAllSchool();
-        return schools;
-    }
-
-    @RequestMapping(value="Course/getAllCourse1", method = RequestMethod.GET)
-    public List<Course> getAllCourse(){
-
-        List<Course> course = new ArrayList<>();
-        course=CourseServices.getAllCourse();
-        return course;
-    }
-
-    @RequestMapping(value="Mark/getAllMark1", method = RequestMethod.GET)
-    public List<Mark> getAllMark(){
-
-        List mark = new ArrayList<>();
-        mark= MarkServices.getAllMark();
-        return mark;
-    }
-
-    @RequestMapping(value="school/GetById", method = RequestMethod.GET)
-    public School getSchoolById(@RequestParam Integer schoolId){
-        School school= SchoolServices.getSchoolById(schoolId);
-        return school;
-    }
-
-    @RequestMapping(value="Course/GetById", method = RequestMethod.GET)
-    public Course getCourseById(@RequestParam Integer CourseId){
-        Course course1= CourseServices.getCourseById(CourseId);
-        return course1;
-    }
-
-    @RequestMapping(value="Mark/GetById", method = RequestMethod.GET)
-    public Mark getMarkById(@RequestParam Integer MarkId){
-        Mark mark= MarkServices.getMarkById(MarkId);
-        return mark;
-    }
 
     @RequestMapping(value = "student/getStudentsBySchoolName", method = RequestMethod.GET)
     public List<Student> getStudentsBySchoolName(@RequestParam String schoolName) {
