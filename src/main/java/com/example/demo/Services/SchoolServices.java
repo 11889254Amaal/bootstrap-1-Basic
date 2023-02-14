@@ -36,5 +36,8 @@ public class SchoolServices {
 
         return schoolInterface.getAllInActive();
     }
+    public  List<School> getLatestRow(){
+       return schoolInterface.getLatestRow();
 
+   }
 }

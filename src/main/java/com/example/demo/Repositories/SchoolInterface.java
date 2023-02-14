@@ -31,7 +31,8 @@ public interface SchoolInterface extends CrudRepository<School,Integer> {
 
 
 
-
+    @Query(value = "  SELECT s TOP (1)   from School s ORDER BY s.id DESC ")
+    List<School>   getLatestRow();
 
 
 }

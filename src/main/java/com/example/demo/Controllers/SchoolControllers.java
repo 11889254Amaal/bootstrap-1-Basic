@@ -45,5 +45,10 @@ public class SchoolControllers {
         return InactiveSchoolsList;
     }
 
+    @RequestMapping(value = "school/GetLatestRow()", method = RequestMethod.GET)
+    public  List<School> getLatestRow() {
+        return schoolServices.getLatestRow();
+
+    }
 
 }
