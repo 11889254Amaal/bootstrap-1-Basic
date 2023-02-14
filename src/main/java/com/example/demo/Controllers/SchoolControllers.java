@@ -17,8 +17,7 @@ public class SchoolControllers {
     @Autowired
     SchoolServices schoolServices;
 
-    @RequestMapping(value = "school/getAll", method = RequestMethod.GET)
-
+    @RequestMapping(value = "/getAll", method = RequestMethod.GET)
     public List<School> getAllSchool() {
 
         List<School> schools = new ArrayList<>();
@@ -34,10 +33,17 @@ public class SchoolControllers {
     }
 
 
-    @RequestMapping(value = "school/getAllSchoolByIsActive")
+    @RequestMapping(value = "School/getAllSchoolByIsActive")
     public List<School> getAllActiveSchools() {
         List<School> activeSchoolsList = schoolServices.getAllActiveSchools();
         return activeSchoolsList;
     }
+
+    @RequestMapping(value = "School/getAllSchoolByIsInActive")
+    public List<School> getAllInActive(){
+        List<School> InactiveSchoolsList = schoolServices.getAllInActive();
+        return InactiveSchoolsList;
+    }
+
 
 }

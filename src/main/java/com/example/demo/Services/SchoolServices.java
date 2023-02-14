@@ -32,4 +32,9 @@ public class SchoolServices {
         return schoolInterface.getAllActiveSchools();
     }
 
+    public List<School> getAllInActive(){
+
+        return schoolInterface.getAllInActive();
+    }
+
 }
