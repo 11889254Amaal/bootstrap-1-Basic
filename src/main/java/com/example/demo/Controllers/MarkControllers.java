@@ -31,7 +31,8 @@ public class MarkControllers {
 
     @RequestMapping(value="Mark/GetById", method = RequestMethod.GET)
     public Mark getMarkById(@RequestParam Integer MarkId){
-        Mark mark= markServices.getMarkById(MarkId);
+        Mark mark= markServices
+                .getMarkById(MarkId);
         return mark;
     }
 

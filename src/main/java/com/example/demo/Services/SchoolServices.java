@@ -27,6 +27,9 @@ public class SchoolServices {
         School school=schoolInterface.getSchoolByName(name);
         return school;
     }
+    public List<School> getAllActiveSchools(){
 
+        return schoolInterface.getAllActiveSchools();
+    }
 
 }
