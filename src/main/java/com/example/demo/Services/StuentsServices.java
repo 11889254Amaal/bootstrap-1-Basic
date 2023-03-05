@@ -12,6 +12,7 @@ import java.util.List;
 @Service
 public class StuentsServices {
     @Autowired
+    static
     StudentsInterface studentsInterface;
     @Autowired
     SchoolInterface schoolInterface;
@@ -36,6 +37,15 @@ public class StuentsServices {
         Integer schoolId = school.getId();
         List<Student> studentList = studentsInterface.getStudentsBySchoolId(schoolId);
         return studentList;
+    }
+
+    public static School getStudentById(Integer id) {
+        School student=studentsInterface.getStudentBy(id);
+        return student;
+    }
+    public List<School> getAllStudent() {
+        return  studentsInterface.getAllStudent();
+
     }
 
 
