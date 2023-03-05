@@ -9,7 +9,32 @@ import java.util.Date;
 public class BaseEntity {
  @CreatedDate
     Date createdDate;
- @UpdateTimestamp
+
+    public Date getCreatedDate() {
+        return createdDate;
+    }
+
+    public void setCreatedDate(Date createdDate) {
+        this.createdDate = createdDate;
+    }
+
+    public Date getUpdateDate() {
+        return updateDate;
+    }
+
+    public void setUpdateDate(Date updateDate) {
+        this.updateDate = updateDate;
+    }
+
+    public Boolean getActive() {
+        return isActive;
+    }
+
+    public void setActive(Boolean active) {
+        isActive = active;
+    }
+
+    @UpdateTimestamp
     Date updateDate;
 
     Boolean isActive;

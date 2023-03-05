@@ -1,5 +1,7 @@
 package com.example.demo.Models;
 
+import lombok.Data;
+
 import javax.persistence.*;
 import java.util.List;
 @Entity
@@ -8,6 +10,8 @@ public class School extends BaseEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
 
     Integer id;
+
+
     @Column(name = "SchoolName")
     String name;
 
