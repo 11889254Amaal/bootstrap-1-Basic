@@ -66,4 +66,5 @@ public interface SchoolInterface extends CrudRepository<School,Integer> {
 
     @Query(value = "update School s set s.isActive=false where s.updateDate=:DateInput")
     School  deleteSchoolByUpdateDate(@Param("DateInput") Date updateDate);
+
 }
