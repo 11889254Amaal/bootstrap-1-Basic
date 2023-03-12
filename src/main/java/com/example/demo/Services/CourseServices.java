@@ -24,4 +24,23 @@ public class CourseServices {
         Course course=courseInterface.getCourseBy(id);
         return course;
     }
+
+    public List<Course> getAllActiveSchools(){
+
+        return courseInterface.getAllActiveSchools();
+    }
+
+    public List<Course> getAllInActive(){
+
+        return courseInterface.getAllInActive();
+    }
+    public Course getLatestRow(){
+        return courseInterface.getLatestRow();
+
+    }
+
+    public Course getLatestUpdated(){
+        return courseInterface.getLatestUpdated();
+
+    }
 }

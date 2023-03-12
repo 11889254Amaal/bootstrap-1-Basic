@@ -20,5 +20,20 @@ public interface CourseInterface extends CrudRepository<Course,Integer> {
     @Query("select s from Course s where s.id=:CourseId")
     Course getCourseBy(@Param("CourseId") Integer id);
 
+    @Query(value = "SELECT s from Course s where s.isActive = true")
+    List<Course> getAllActiveSchools();
+
+
+    @Query(value = "SELECT s from Course s where s.isActive = false ")
+    List<Course>  getAllInActive();
+
+
+
+    @Query(value = "SELECT s from Course s where s.id=(SELECT max(s.id) from Course s)")
+    Course getLatestRow();
+
+    @Query(value = "SELECT s from Course s where s.updateDate=(SELECT max(s.updateDate) from Course s )")
+    Course  getLatestUpdated();
+
 
 }
